@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edicion informacion del estudiante</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <a class="navbar-brand" href="#">Edicion informacion del estudiante</a>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <!--FORM-->
+          <div class="col-md-5 offset-md-3">
+            <div class="card">
+              <div class="card-body">
+                <form action="/edit/<%= alumno._id %>" method="post">
+
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="nombre" placeholder="Nombre" value="<%= alumno.nombre %>">
+                  </div>
+
+                  <div class="form-group">
+                    <input class="form-control" type="number" name="edad" placeholder="edad" value="<%= alumno.edad %>">
+                  </div>
+
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="genero" placeholder="Genero" value="<%= alumno.genero %>">
+                  </div>
+                  
+                  <button class="btn btn-primary" type="submit">
+                    Update 
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </body>    
+
+  <html>    
+
